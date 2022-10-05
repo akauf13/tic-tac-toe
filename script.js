@@ -24,7 +24,6 @@ document.querySelectorAll(`.cell`).forEach((cell) => cell.addEventListener("clic
 function handleCellClick(e) {
   let clickedCell = e.target
   let cellIndex = parseInt(clickedCell.dataset.cell)
-  console.log(cellIndex);
   if (gameBoard[cellIndex] !== "" || !game) {
     return
   }
@@ -56,14 +55,12 @@ function handleGameResult() {
   if (roundWin) {
     gameStatus.innerText = winMessage()
     game = false
-    console.log(gameStatus.innerText);
     return
   }
   let gameDraw = !gameBoard.includes("")
   if (gameDraw) {
     game = false
     gameStatus.innerHTML = drawMessage()
-    console.log("It's a Draw!");
     return
   }
   changePlayer()
