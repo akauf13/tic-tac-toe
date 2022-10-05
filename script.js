@@ -1,12 +1,9 @@
-let box = document.querySelector(".container");
-console.log(box);
-
 let gameStatus = document.querySelector(".game-status");
 
 let game = true
 let currentPlayer = "X"
-let currentTurn = () => `${currentPlayer} Turn`
-gameStatus.innerHTML = currentTurn()
+let currentTurn = () => `${currentPlayer}'s Turn`
+gameStatus.innerText = currentTurn()
 let winMessage = () => `${currentPlayer} has won!`
 let drawMessage = () => `It's a Draw!`
 let gameBoard = ["", "", "", "", "", "", "", "", ""]
@@ -59,14 +56,15 @@ function handleGameResult() {
   if (roundWin) {
     gameStatus.innerText = winMessage()
     game = false
-    console.log(winMessage());
     console.log(gameStatus.innerText);
+    return
   }
   let gameDraw = !gameBoard.includes("")
   if (gameDraw) {
     game = false
     gameStatus.innerHTML = drawMessage()
     console.log("It's a Draw!");
+    return
   }
   changePlayer()
 }

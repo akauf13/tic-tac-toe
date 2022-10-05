@@ -20,8 +20,61 @@ h1 {
   height: 100px;
   border: 1px solid black;
   cursor: pointer;
-  
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Permanent Marker", cursive;
+  /* box-shadow: 0 0 0 1px #333333; */
+  line-height: 100px;
+  font-size: 60px;
 }
-h3 {
-  border: 2px solid red
+
+button {
+  text-align: center;
+  justify-content: center;
 }
+section {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.TL, .TM, .TR {
+border-top: none;
+}
+.TL, .ML, .BL {
+border-left: none;
+}
+.TR, .MR, .BR {
+  border-right: none;
+}
+.BL, .BM, .BR {
+  border-bottom: none;
+}
+
+/* 
+body {
+  font-family: "Arial", sans-serif;
+}
+
+section {
+  text-align: center;
+}
+
+.game--container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 306px;
+  margin: 50px auto;
+}
+
+.cell {
+  font-family: "Permanent Marker", cursive;
+  width: 100px;
+  height: 100px;
+  box-shadow: 0 0 0 1px #333333;
+  border: 1px solid #333333;
+  cursor: pointer;
+  line-height: 100px;
+  font-size: 60px;
+} */
